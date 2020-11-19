@@ -65,6 +65,10 @@ if __name__ == '__main__':
         print(config_file)
         config = yaml.load(f, Loader=yaml.FullLoader)
 
+    if config['inference']['model_to_load'] == "default":
+        config['inference']['model_to_load'] = os.path.join(*[os.path.dirname(monaifbs.__file__),
+                                                    "models", "checkpoint_dynUnet_DiceXent.pt"])
+
     assert len(args.input_names) == len(args.segment_output_names), "The numbers of input output filenames do not match"
 
     # loop over all input files and run inference for each of them

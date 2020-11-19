@@ -326,5 +326,9 @@ if __name__ == '__main__':
     if not os.path.exists(config['output']['out_dir']):
         os.makedirs(config['output']['out_dir'])
 
+    if config['inference']['model_to_load'] == "default":
+        config['inference']['model_to_load'] = os.path.join(*[os.path.dirname(monaifbs.__file__),
+                                                    "models", "checkpoint_dynUnet_DiceXent.pt"])
+
     # run inference with MONAI dynUnet
     run_inference(in_files, config)

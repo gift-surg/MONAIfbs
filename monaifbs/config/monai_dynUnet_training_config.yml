@@ -24,7 +24,7 @@ training:
   validation_every_n_epochs: 20    # number of training epochs to run in between validation loops
   lr: 1e-2                         # initial learning rate [note: LR scheduler is (1 - epoch / nr_train_epochs) ** 0.9]
   manual_seed: 0                   # set manual seed for determinism
-  model_to_load: null              # (pre-trained) network to load for continuing training. If null, training is restarted from scratch
+  model_to_load: null              # path to (pre-trained) network to load for continuing training. If null, training is restarted from scratch
 
 output:
   max_nr_models_saved: 1           # Maximum number of models to save in the output folders (older models are deleted)
