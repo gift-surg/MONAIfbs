@@ -1,0 +1,15 @@
+*.nii
+*.nii.gz
+*.tar.gz
+*.deb
+*.zip
+*.pyc
+*iterate.dat
+*.egg-info
+*.idea
+*.wiki
+/.project
+.DS_Store
+**/.DS_Store
+__pycache__
+**/__pycache__
