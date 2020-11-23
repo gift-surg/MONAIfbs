@@ -7,7 +7,7 @@ a freely available, community-supported, PyTorch-based framework for deep learni
 
 A pre-trained dynUNet model is [provided][dynUnetmodel] and can be directly used for inference on new data using 
 the script `src/inference/monai_dynunet_inference.py`. Alternatively, the script `fetal_brain_seg.py` provides
-the same inference functionality within an appropriate interface to be used within the niftymic package and by the 
+the same inference functionality within an appropriate interface to be used within the [NiftyMIC][NiftyMIC] package and by the 
 executable command `niftymic_segment_fetal_brains`. See the sections [Inference][inference_section] and 
 [Use within NiftyMIC][use_section] below.
 
@@ -36,7 +36,7 @@ with the right path to the model to load.
 
 ## Installation
 After installing git lfs, clone the repository locally using  
-`git clone https://github.com/martaranzini/MONAIfbs.git`  
+`git clone https://github.com/gift-surg/MONAIfbs.git`  
  
 Change to the downloaded directory and install all Python and Pytorch dependencies by running the following commands sequentially:  
 `pip install -r requirements.txt`  
@@ -152,7 +152,7 @@ python <path_to_MONAIfbs>/monaifbs/src/inference/monai_dynunet_inference.py \
 ```
 
 ## Use within NiftyMIC (for inference)
-The automated segmentation tool was developed in support to the Super-Resolution Reconstruction package [NiftyMIC][NiftyMIC]
+The automated segmentation tool was developed in support to the Super-Resolution Reconstruction package [NiftyMIC][NiftyMIC]. 
 By default, NiftyMIC uses monaifbs utilities to automatically generate fetal brain segmentation masks that can be used
 for the reconstruction pipeline.
 Provided the dependencies for NiftyMIC and monaifbs are installed, create the automatic fetal brain masks of HASTE-like 
@@ -237,12 +237,12 @@ Centre based at GSTT NHS Trust and King's College London.
 [installation]: https://github.com/gift-surg/NiftyMIC/wiki/niftymic-installation
 [gitlfs]: https://github.com/git-lfs/git-lfs/wiki/Installation
 [dynUnetmodel]: https://zenodo.org/record/4282679#.X7fyttvgqL5
-[inference_section]: https://github.com/martaranzini/MONAIfbs#inference
-[use_section]: https://github.com/martaranzini/MONAIfbs#use-within-niftymic-for-inference
+[inference_section]: https://github.com/gift-surg/MONAIfbs#inference
+[use_section]: https://github.com/gift-surg/MONAIfbs#use-within-niftymic-for-inference
 [dynUnettutorial]: https://github.com/Project-MONAI/tutorials/blob/master/modules/dynunet_tutorial.ipynb
 [nnunet]: https://arxiv.org/abs/1809.10486
-[inference_config]: https://github.com/martaranzini/MONAIfbs/blob/main/monaifbs/config/monai_dynUnet_inference_config.yml
-[training_config]: https://github.com/martaranzini/MONAIfbs/blob/main/monaifbs/config/monai_dynUnet_training_config.yml
+[inference_config]: https://github.com/gift-surg/MONAIfbs/blob/main/monaifbs/config/monai_dynUnet_inference_config.yml
+[training_config]: https://github.com/gift-surg/MONAIfbs/blob/main/monaifbs/config/monai_dynUnet_training_config.yml
 [mranzini]: https://www.linkedin.com/in/marta-bianca-maria-ranzini
 [bsd]: https://opensource.org/licenses/BSD-3-Clause
 [persistent_dataset]: https://github.com/Project-MONAI/MONAI/blob/9f51893d162e5650f007dff8e0bcc09f0d9a6680/monai/data/dataset.py#L71
@@ -251,4 +251,4 @@ Centre based at GSTT NHS Trust and King's College London.
 [epsrc]: http://www.epsrc.ac.uk
 [cme]: https://medicalengineering.org.uk/
 [NiftyMIC]: https://github.com/gift-surg/NiftyMIC
-[importantnote]: https://github.com/martaranzini/MONAIfbs#important-note
+[importantnote]: https://github.com/gift-surg/MONAIfbs#important-note
